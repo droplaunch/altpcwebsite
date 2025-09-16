@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Alt PC — Custom Builds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#050505; --white:#f5f5f5; --muted:#9a9a9a;
+  }
+  * { box-sizing:border-box; }
+  html,body {
+    height:100%; margin:0;
+    background:var(--bg); color:var(--white);
+    font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  }
+  /* STORE PAGE */
+  .wrap { max-width:1400px; margin:0 auto; padding:28px; display:block; }
+  header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:4px;font-size:20px}
+  .brand img{height:100px;width:auto}
+  nav{display:flex;gap:14px;align-items:center}
+  nav button{background:transparent;border:0;color:var(--muted);font-weight:600;letter-spacing:1px;cursor:pointer;padding:8px}
+  nav button:hover{color:var(--white)}
+  .hero{display:flex;align-items:center;gap:48px;padding:48px 0}
+  .hero-left{flex:1}
+  .hero-left h1{font-size:72px;line-height:0.9;margin:0;font-weight:900}
+  .hero-left p{color:var(--muted);margin-top:18px;max-width:620px}
+  .hero-right{width:560px;flex-shrink:0}
+  .hero-right img{width:100%;height:560px;object-fit:cover;border-radius:6px;display:block}
+  .products{margin-top:36px;display:grid;gap:26px}
+  .product-row{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:center;padding:18px;background:rgba(255,255,255,0.02);border-radius:6px}
+  .product-row img{width:100%;height:360px;object-fit:cover;border-radius:4px}
+  .product-info h3{font-size:28px;margin:0;font-weight:800}
+  .price{margin-top:14px;font-weight:700}
+  .muted{color:var(--muted);margin-top:12px}
+  .actions{margin-top:18px;display:flex;gap:12px}
+  .btn{background:var(--white);color:var(--bg);border:0;padding:12px 18px;font-weight:700;cursor:pointer;border-radius:6px}
+  .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:6px;color:var(--muted);cursor:pointer}
+  footer{margin-top:48px;color:var(--muted);font-size:13px;padding-bottom:28px;text-align:center}
+  @media (max-width:900px){
+    .hero{flex-direction:column}
+    .hero-right{width:100%}
+    .product-row{grid-template-columns:1fr}
+    .product-row img{height:320px}
+    .hero-left h1{font-size:44px}
+  }
+</style>
+</head>
+<body>
+  <!-- STORE -->
+  <div class="wrap" id="mainContent">
+    <header>
+      <div class="brand">
+        <img src="assets/Screenshot 2025-09-12 081352.png" alt="Alt PC Logo"> Alt PC
+      </div>
+      <nav>
+        <button onclick="scrollToProducts()">BUILDS</button>
+<a href="contact.html"><button>CONTACT</button></a>
+        <a href="index.html"><button>BACK TO HOME</button></a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h1>CUSTOM<br>PC BUILDS</h1>
+        <p>Performance-driven, hand-assembled rigs. Built to order for gamers, creators, and professionals.</p>
+        <div class="actions" style="margin-top:22px">
+          <button class="btn" onclick="scrollToProducts()">SEE BUILDS</button>
+          <button class="ghost" onclick="scrollToContact()">CONTACT</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="assets/alt pc pic.jpg" alt="hero image">
+      </div>
+    </section>
+
+    <main class="products" id="products">
+
+      <!-- Product 1 -->
+      <section class="product-row">
+        <div><img src="https://images.unsplash.com/photo-1587202372616-b43abea06c2a?w=1200" alt="Ryzen 5 5600"></div>
+        <div class="product-info">
+          <h3>Ryzen 5 5600</h3>
+          <div class="price">AED 3799</div>
+          <div class="muted">Motherboard-b550</div>
+          <div class="muted">Psu-Thermaltake Lightpower 650w</div>
+          <div class="muted">Gpu- 5060</div>
+          <div class="muted">Ram- 32gb drr4</div>
+          <div class="muted">Cooler- Excefore CPU Air Cooler</div>
+          <div class="muted">Ssd- Kingston Nv3 512gb</div>
+          3799 aed:
+Cpu- Ryzen 5 5600
+Motherboard: b550
+Ram- 32gb drr4
+Cooler:Excefore CPU Air Cooler
+Ssd- Kingston Nv3 512gb
+Psu:Thermaltake Lightpower 650w
+Gpu: 5060
+          <div class="actions">
+            <a href="https://paypal.me/YOURPAYPALLINK" target="_blank"><button class="btn">BUY VIA PAYPAL</button></a>
+            <a href="mailto:altpcofficial@gmail.com?subject=Inquiry: Ryzen 5 5600"><button class="ghost">EMAIL US</button></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product 2 -->
+      <section class="product-row">
+        <div><img src="https://images.unsplash.com/photo-1606813909355-b4bdc44e0a3a?w=1200" alt="Creator Pro"></div>
+        <div class="product-info">
+          <h3>Creator Pro</h3>
+          <div class="price">AED 5200</div>
+          <div class="muted">RTX 4080, Intel i9, 64GB RAM, 2TB NVMe SSD.</div>
+          <div class="actions">
+            <a href="https://paypal.me/YOURPAYPALLINK" target="_blank"><button class="btn">BUY VIA PAYPAL</button></a>
+            <a href="mailto:altpcofficial@gmail.com?subject=Inquiry: Creator Pro"><button class="ghost">EMAIL US</button></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product 3 -->
+      <section class="product-row">
+        <div><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200" alt="Entry Rig"></div>
+        <div class="product-info">
+          <h3>Entry Rig</h3>
+          <div class="price">AED 2500</div>
+          <div class="muted">RTX 3060, Ryzen 5, 16GB RAM, 512GB SSD.</div>
+          <div class="actions">
+            <a href="https://paypal.me/YOURPAYPALLINK" target="_blank"><button class="btn">BUY VIA PAYPAL</button></a>
+            <a href="mailto:altpcofficial@gmail.com?subject=Inquiry: Entry Rig"><button class="ghost">EMAIL US</button></a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer>Alt PC • Custom Builds • © <span id="year"></span></footer>
+  </div>
+
+<script>
+  function scrollToProducts(){ 
+    const container = document.getElementById('products');
+    window.scrollTo({ top: container.offsetTop-20, behavior:'smooth' }) 
+  }
+  function scrollToContact(){ window.location.href = "mailto:altpcbuilds@gmail.com"; }
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
